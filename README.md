@@ -7,4 +7,4 @@ This is a project showcasing a convolutional neural network (CNN) model implemen
 ## Usage 🛠️
 To use this project, you will need to have Python and PyTorch installed on your machine. You can install them by following the instructions in the official PyTorch documentation.
 
-Once you have installed the necessary dependencies, you can run the ML.py script to train the CNN model. 
+Once you have installed the necessary dependencies, you can run the ML.py script to train and then test the CNN model. 
