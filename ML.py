@@ -13,6 +13,7 @@ train = datasets.MNIST(root="data", download=True, train=True, transform=ToTenso
 dataset = DataLoader(train, 32)
 
 #create nueral network 
+#testing
 
 class imgclassification(nn.Module):
     def __init__(self):
@@ -43,7 +44,7 @@ if __name__ == "__main__":
         clf.load_state_dict(load(f)) #loads weights into clasifier
     
     
-    img = Image.open('9919.jpg') #call jpeg file here 
+    img = Image.open('985.jpg') #call jpeg file here 
 
     img_tensor = ToTensor()(img).unsqueeze(0).to('cpu') #convert to a tensor
 
