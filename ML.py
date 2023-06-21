@@ -57,6 +57,8 @@ lossfn = nn.CrossEntropyLoss()
 if __name__ == "__main__":
     with open('model_state.pt', 'rb') as f:
         clf.load_state_dict(load(f)) #loads weights into clasifier
+
+'''
     thread_stop_event = threading.Event()
 
     load_thread = threading.Thread(target=loading_symbol)
@@ -88,8 +90,10 @@ if __name__ == "__main__":
     with open('model_state.pt', 'wb') as f:
         save(clf.state_dict(), f)
 
-    img = Image.open('./Testingimages/985.jpg') #call jpeg file here 
-    img_tensor = ToTensor()(img).unsqueeze(0).to('cpu') #convert to a tensor
-    print("The predicted result is" , (torch.argmax(clf(img_tensor)))) #return number image
+'''
+
+img = Image.open('./Testingimages/985.jpg') #call jpeg file here 
+img_tensor = ToTensor()(img).unsqueeze(0).to('cpu') #convert to a tensor
+print("The predicted result is" ,  (torch.argmax(clf(img_tensor)))) #return number image
 
 
